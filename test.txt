@@ -307,5 +307,3 @@ $ git push origin :linha_2
 To https://github.com/wesley-vieira/testGit.git
  - [deleted]         linha_2
  
- 
- ssssssssssssssssssssssssssss
