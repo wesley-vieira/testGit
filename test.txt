@@ -306,3 +306,6 @@ wesley@DESKTOP-MVOD6J5 MINGW64 /c/users/wesley/desktop/git/testGit (master)
 $ git push origin :linha_2
 To https://github.com/wesley-vieira/testGit.git
  - [deleted]         linha_2
+ 
+ 
+ ssssssssssssssssssssssssssss
