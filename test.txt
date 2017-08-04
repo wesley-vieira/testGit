@@ -1,2 +1,308 @@
-this is my first text filethis is my first text filethis is my first text file
-this is my first text file
+
+wesley@DESKTOP-MVOD6J5 MINGW64 ~
+$ cd
+
+wesley@DESKTOP-MVOD6J5 MINGW64 ~
+$ cd c
+bash: cd: c: No such file or directory
+
+wesley@DESKTOP-MVOD6J5 MINGW64 ~
+$ cd /c
+
+wesley@DESKTOP-MVOD6J5 MINGW64 /c
+$ cd \Users
+
+wesley@DESKTOP-MVOD6J5 MINGW64 /c/Users
+$ cd /c
+
+wesley@DESKTOP-MVOD6J5 MINGW64 /c
+$ cd C:\Users\wesley\Desktop\git
+bash: cd: C:UserswesleyDesktopgit: No such file or directory
+
+wesley@DESKTOP-MVOD6J5 MINGW64 /c
+$ cd /C:\Users\wesley\Desktop\git
+bash: cd: /C:UserswesleyDesktopgit: No such file or directory
+
+wesley@DESKTOP-MVOD6J5 MINGW64 /c
+$ cd users
+
+wesley@DESKTOP-MVOD6J5 MINGW64 /c/users
+$ cd wesley
+
+wesley@DESKTOP-MVOD6J5 MINGW64 /c/users/wesley
+$ cd desktop
+
+wesley@DESKTOP-MVOD6J5 MINGW64 /c/users/wesley/desktop
+$ cd git
+
+wesley@DESKTOP-MVOD6J5 MINGW64 /c/users/wesley/desktop/git
+$ cd /c/users/wesley/desktop
+
+wesley@DESKTOP-MVOD6J5 MINGW64 /c/users/wesley/desktop
+$ ls
+ desktop.ini   git/  'Git Bash.lnk'*
+
+wesley@DESKTOP-MVOD6J5 MINGW64 /c/users/wesley/desktop
+$ cd git
+
+wesley@DESKTOP-MVOD6J5 MINGW64 /c/users/wesley/desktop/git
+$ ls
+
+wesley@DESKTOP-MVOD6J5 MINGW64 /c/users/wesley/desktop/git
+$ git config --global user.name "wesley-vieira"
+
+wesley@DESKTOP-MVOD6J5 MINGW64 /c/users/wesley/desktop/git
+$ ^C
+
+wesley@DESKTOP-MVOD6J5 MINGW64 /c/users/wesley/desktop/git
+$ git config --global user.email wesley.pandorawebsolutions@gmail.com
+
+wesley@DESKTOP-MVOD6J5 MINGW64 /c/users/wesley/desktop/git
+$ git clone https://github.com/wesley-vieira/testGit.git
+Cloning into 'testGit'...
+remote: Counting objects: 3, done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+
+wesley@DESKTOP-MVOD6J5 MINGW64 /c/users/wesley/desktop/git
+$ ls
+testGit/
+
+wesley@DESKTOP-MVOD6J5 MINGW64 /c/users/wesley/desktop/git
+$ cd testGit
+
+wesley@DESKTOP-MVOD6J5 MINGW64 /c/users/wesley/desktop/git/testGit (master)
+$ ls
+README.md
+
+wesley@DESKTOP-MVOD6J5 MINGW64 /c/users/wesley/desktop/git/testGit (master)
+$ ls
+README.md  test.txt
+
+wesley@DESKTOP-MVOD6J5 MINGW64 /c/users/wesley/desktop/git/testGit (master)
+$ git add test.txt
+
+wesley@DESKTOP-MVOD6J5 MINGW64 /c/users/wesley/desktop/git/testGit (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   test.txt
+
+
+wesley@DESKTOP-MVOD6J5 MINGW64 /c/users/wesley/desktop/git/testGit (master)
+$ git commit -m "first commit" test.txt
+[master 32c9820] first commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test.txt
+
+wesley@DESKTOP-MVOD6J5 MINGW64 /c/users/wesley/desktop/git/testGit (master)
+$ git push -u origin master
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 310 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/wesley-vieira/testGit.git
+   e93a516..32c9820  master -> master
+Branch master set up to track remote branch master from origin.
+
+wesley@DESKTOP-MVOD6J5 MINGW64 /c/users/wesley/desktop/git/testGit (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        test.txt.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+wesley@DESKTOP-MVOD6J5 MINGW64 /c/users/wesley/desktop/git/testGit (master)
+$ git commit -m "second commit" test.txt
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Untracked files:
+        test.txt.txt
+
+nothing added to commit but untracked files present
+
+wesley@DESKTOP-MVOD6J5 MINGW64 /c/users/wesley/desktop/git/testGit (master)
+$ git commit -m "second commit" test.txt
+[master 1e16e62] second commit
+ 1 file changed, 3 insertions(+)
+
+wesley@DESKTOP-MVOD6J5 MINGW64 /c/users/wesley/desktop/git/testGit (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+nothing to commit, working tree clean
+
+wesley@DESKTOP-MVOD6J5 MINGW64 /c/users/wesley/desktop/git/testGit (master)
+$ git push -u origin master
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 318 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/wesley-vieira/testGit.git
+   32c9820..1e16e62  master -> master
+Branch master set up to track remote branch master from origin.
+
+wesley@DESKTOP-MVOD6J5 MINGW64 /c/users/wesley/desktop/git/testGit (master)
+$ git pull
+remote: Counting objects: 3, done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/wesley-vieira/testGit
+   1e16e62..f5f6b29  master     -> origin/master
+Updating 1e16e62..f5f6b29
+Fast-forward
+ test.txt | 2 --
+ 1 file changed, 2 deletions(-)
+
+wesley@DESKTOP-MVOD6J5 MINGW64 /c/users/wesley/desktop/git/testGit (master)
+$
+
+wesley@DESKTOP-MVOD6J5 MINGW64 /c/users/wesley/desktop/git/testGit (master)
+$ git checkout -b linha_1
+Switched to a new branch 'linha_1'
+
+wesley@DESKTOP-MVOD6J5 MINGW64 /c/users/wesley/desktop/git/testGit (linha_1)
+$ git commit -m "commit linha 1" test.txt
+[linha_1 0ef9e01] commit linha 1
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+wesley@DESKTOP-MVOD6J5 MINGW64 /c/users/wesley/desktop/git/testGit (linha_1)
+$ git push -u origin linha_1
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 316 bytes | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/wesley-vieira/testGit.git
+ * [new branch]      linha_1 -> linha_1
+Branch linha_1 set up to track remote branch linha_1 from origin.
+
+wesley@DESKTOP-MVOD6J5 MINGW64 /c/users/wesley/desktop/git/testGit (linha_1)
+$ git checkout -b linha_2
+Switched to a new branch 'linha_2'
+M       test.txt
+
+wesley@DESKTOP-MVOD6J5 MINGW64 /c/users/wesley/desktop/git/testGit (linha_2)
+$ git commit -m "commit linha 2" test.txt
+[linha_2 bd65598] commit linha 2
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+wesley@DESKTOP-MVOD6J5 MINGW64 /c/users/wesley/desktop/git/testGit (linha_2)
+$ git push -u origin linha_2
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 316 bytes | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/wesley-vieira/testGit.git
+ * [new branch]      linha_2 -> linha_2
+Branch linha_2 set up to track remote branch linha_2 from origin.
+
+wesley@DESKTOP-MVOD6J5 MINGW64 /c/users/wesley/desktop/git/testGit (linha_2)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up-to-date with 'origin/master'.
+
+wesley@DESKTOP-MVOD6J5 MINGW64 /c/users/wesley/desktop/git/testGit (master)
+$ git diff linha_1 linha_2
+diff --git a/test.txt b/test.txt
+index 7c61fb6..b7a61d1 100644
+--- a/test.txt
++++ b/test.txt
+@@ -1,2 +1,3 @@
+ this is my first text filethis is my first text filethis is my first text file
+-this is my first text filethis is my first text file
++this is my first text file
++this is my first text file
+\ No newline at end of file
+
+wesley@DESKTOP-MVOD6J5 MINGW64 /c/users/wesley/desktop/git/testGit (master)
+$ git checkout linha_1
+Switched to branch 'linha_1'
+Your branch is up-to-date with 'origin/linha_1'.
+
+wesley@DESKTOP-MVOD6J5 MINGW64 /c/users/wesley/desktop/git/testGit (linha_1)
+$ git pull
+fatal: unable to access 'https://github.com/wesley-vieira/testGit.git/': Couldn'                                                                                                                t resolve host 'github.com'
+
+wesley@DESKTOP-MVOD6J5 MINGW64 /c/users/wesley/desktop/git/testGit (linha_1)
+$ git pull
+fatal: unable to access 'https://github.com/wesley-vieira/testGit.git/': Couldn't resolve host 'github.com'
+
+wesley@DESKTOP-MVOD6J5 MINGW64 /c/users/wesley/desktop/git/testGit (linha_1)
+$ git branch -d linha_1
+error: Cannot delete branch 'linha_1' checked out at 'C:/Users/wesley/Desktop/gi                                                                                                                t/testGit'
+
+wesley@DESKTOP-MVOD6J5 MINGW64 /c/users/wesley/desktop/git/testGit (linha_1)
+$ checkout master
+bash: checkout: command not found
+
+wesley@DESKTOP-MVOD6J5 MINGW64 /c/users/wesley/desktop/git/testGit (linha_1)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up-to-date with 'origin/master'.
+
+wesley@DESKTOP-MVOD6J5 MINGW64 /c/users/wesley/desktop/git/testGit (master)
+$ git branch -d linha_1
+warning: deleting branch 'linha_1' that has been merged to
+         'refs/remotes/origin/linha_1', but not yet merged to HEAD.
+Deleted branch linha_1 (was 0ef9e01).
+
+wesley@DESKTOP-MVOD6J5 MINGW64 /c/users/wesley/desktop/git/testGit (master)
+$ git branch -d linha_1
+error: branch 'linha_1' not found.
+
+wesley@DESKTOP-MVOD6J5 MINGW64 /c/users/wesley/desktop/git/testGit (master)
+$ git branch -d linha_2
+warning: deleting branch 'linha_2' that has been merged to
+         'refs/remotes/origin/linha_2', but not yet merged to HEAD.
+Deleted branch linha_2 (was bd65598).
+
+wesley@DESKTOP-MVOD6J5 MINGW64 /c/users/wesley/desktop/git/testGit (master)
+$ git branch -d linha_2
+error: branch 'linha_2' not found.
+
+wesley@DESKTOP-MVOD6J5 MINGW64 /c/users/wesley/desktop/git/testGit (master)
+$ git branch -d linha_1
+error: branch 'linha_1' not found.
+
+wesley@DESKTOP-MVOD6J5 MINGW64 /c/users/wesley/desktop/git/testGit (master)
+$ git branch -d linha_2
+error: branch 'linha_2' not found.
+
+wesley@DESKTOP-MVOD6J5 MINGW64 /c/users/wesley/desktop/git/testGit (master)
+$ git push
+Everything up-to-date
+
+wesley@DESKTOP-MVOD6J5 MINGW64 /c/users/wesley/desktop/git/testGit (master)
+$ git push master linha_1
+error: src refspec linha_1 does not match any.
+error: failed to push some refs to 'master'
+
+wesley@DESKTOP-MVOD6J5 MINGW64 /c/users/wesley/desktop/git/testGit (master)
+$ git push origin master linha_1
+error: src refspec linha_1 does not match any.
+error: failed to push some refs to 'https://github.com/wesley-vieira/testGit.git                                                                                                                '
+
+wesley@DESKTOP-MVOD6J5 MINGW64 /c/users/wesley/desktop/git/testGit (master)
+$ git push origin :linha_1
+To https://github.com/wesley-vieira/testGit.git
+ - [deleted]         linha_1
+
+wesley@DESKTOP-MVOD6J5 MINGW64 /c/users/wesley/desktop/git/testGit (master)
+$ git push origin :linha_2
+To https://github.com/wesley-vieira/testGit.git
+ - [deleted]         linha_2
